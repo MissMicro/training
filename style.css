@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+
+body{
+    background-color: white;
+    font-family: 'Oswald', sans-serif;
+}
+
+main{ 
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 0.5fr 0.75fr repeat(3, 1fr) minmax(auto, 1fr);
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-template-areas:
+            "title currentTime reverse1 cars uc1"
+            "uc2 uc3 reverse2 uc5 uc6"
+            "uc7 uc8 uc9 uc10 uc11";
+    grid-auto-flow: dense;
+    justify-content: center;
+}
+
+input[type="text"]{
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+   
+}
+.title > h2{
+    font-weight: 100;
+    text-align: left;
+    padding-left: 15px;
+}
+#currentTime{
+    font-weight: 400;
+    text-align: center;
+    padding-top: 10%;
+}
+#reverse{
+    text-align: center;
+    padding-top: 10%;
+}
+#reverse input[type="text"]{
+    outline: none;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: solid 2px #c9c9c9;
+    transition: border 0.3s;
+}
+#reverse input[type="text"]:focus,
+#reverse input[type="text"].focus {
+    outline: none;
+    border-bottom: solid 2px #969696;
+}
+
+.reverse-btn{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    background-color: transparent;
+    border: 2px solid #969696;
+    padding: 5px;
+    outline: none;
+}
+.reverse-btn:hover{
+    background-color: transparent;
+    border: 2px solid #FF0048;
+    outline: none;
+}
+
+.underconstr{
+    text-align: center;
+    padding-top: 10%;
+ 
+}
+[data-grid='title'] {
+    grid-area: title;
+    padding-right: 15px;
+    border: 1px solid #60c0d8;
+    background-color: #60c0d8;
+
+}
+[data-grid='currentTime'] {
+    grid-area: currentTime;
+    border: 1px solid #CDDC39;
+}
+[data-grid='currentTime']:hover {
+    background: #CDDC39;
+}
+
+[data-grid='reverseContent'] {
+    grid-row-start: reverse1;
+    grid-row-end: reverse2;
+
+    border: 1px solid #FF0048;
+    background: #FF0048;
+}
+[data-grid='reverseContent']:hover {
+    background: none;
+    border: 1px solid #FF0048;
+}
+
+[data-grid='underconstruction1'] {
+    border: 1px solid #03A9F4;
+    
+}
+[data-grid='underconstruction1']:hover {
+    background: #03A9F4;
+}
+[data-grid='underconstruction2'] {
+    border: 1px dashed #FFC107;
+}
+[data-grid='underconstruction2']:hover {
+    background: #FFC107;
+}
+[data-grid='underconstruction3'] {
+    border: 1px dashed #673AB7;
+}
+[data-grid='underconstruction3']:hover {
+    background: rgb(103, 58, 183);
+}
+[data-grid='underconstruction4'] {
+    border: 1px dashed #f78a21;
+}
+[data-grid='underconstruction4']:hover {
+    background: rgb(247, 138, 33);
+}
+[data-grid='underconstruction5'] {
+    border: 1px dashed #e53f8b;
+}
+[data-grid='underconstruction5']:hover {
+    background: rgb(229, 63, 139);
+}
+[data-grid='underconstruction6'] {
+    border: 1px dashed #6cb298;
+}
+[data-grid='underconstruction6']:hover {
+    background: rgb(108, 178, 152);
+}

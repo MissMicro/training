@@ -1,14 +1,33 @@
 <!DOCTYPE html> 
 <html> 
 <head>
-    
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body onload="currentTime();">
-   
-    
-    <div id="currentTime"></div>
-    
 
+<body>
+   <main>
+       <div class="title" data-grid="title">
+           <h2>JavaScript <br/>playground</h2>
+       </div>
+
+       <div id="currentTime" data-grid="currentTime"></div>
+    
+       <div id="reverse" data-grid="reverseContent">
+        <h3>Type a number or text:</h3>
+        <input id="contentToReverse" type="text">
+        <p><button type="button" class="reverse-btn">REVERSE</button></p>
+        <p>Result:</p>
+        <p id="result">-</p>
+       </div>
+    
+       <div data-grid="underconstruction1">4</div>
+       <div class="underconstr" data-grid="underconstruction2">under construction :)</div>
+       <div data-grid="underconstruction3">6</div>
+       <div data-grid="underconstruction4">7</div>
+       <div data-grid="underconstruction5">8</div>
+       <div data-grid="underconstruction6">9</div>
+       
+    </main>
 <script src="script.js"></script>
 </body>
 
