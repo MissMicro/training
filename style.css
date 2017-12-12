@@ -22,7 +22,10 @@ input[type="text"]{
     appearance: none;
     box-shadow: none;
     border-radius: none;
-   
+    outline: none;
+}
+select{
+    outline:none;
 }
 .title > h2{
     font-weight: 100;
@@ -70,8 +73,46 @@ input[type="text"]{
 .underconstr{
     text-align: center;
     padding-top: 10%;
- 
 }
+
+#carList{
+    text-align: center;
+}
+
+.save-btn{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    background-color: transparent;
+    border: 1px dotted #000000;
+    padding: 2px;
+}
+.save-btn:hover{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    background-color: transparent;
+    border: 1px solid #000000;
+    padding: 2px;
+}
+
+.delete-btn{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    background-color: transparent;
+    border: 1px dotted #000000;
+    padding: 2px;
+}
+.delete-btn:hover{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    background-color: transparent;
+    border: 1px solid #000000;
+    padding: 2px;
+}
+
 [data-grid='title'] {
     grid-area: title;
     padding-right: 15px;
@@ -99,11 +140,11 @@ input[type="text"]{
     border: 1px solid #FF0048;
 }
 
-[data-grid='underconstruction1'] {
+[data-grid='carList'] {
     border: 1px solid #03A9F4;
     
 }
-[data-grid='underconstruction1']:hover {
+[data-grid='carList']:hover {
     background: #03A9F4;
 }
 [data-grid='underconstruction2'] {

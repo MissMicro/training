@@ -32,8 +32,6 @@ setInterval('currentTime()', 1000);
 var content = document.querySelector("#contentToReverse");
 var btnRev = document.querySelector(".reverse-btn");
 
-content.addEventListener("input", reverse());
-
 btnRev.addEventListener("click", reverse);
 
 function reverse(){
@@ -58,6 +56,40 @@ function reverse3(input) {
     }
     return input;
 }
+
+/*Car List BOX*/
+
+var select = document.getElementsByTagName('select')[0];
+
+var save = document.getElementsByClassName('save-btn')[0];
+var deletee = document.getElementsByClassName('delete-btn')[0];
+
+save.addEventListener("click",function() {
+    var newItem = document.getElementById('newItem');
+    console.log('Liseczek ' + newItem.value);
+    var newOption = '<option value="'+newItem.value+'">'+newItem.value+'</option>';
+    select.innerHTML += newOption;
+    select.value = newItem.value;
+    newItem.value = "";
+});
+
+deletee.addEventListener("click",function() {
+    var itemToDelete = document.getElementById('itemToDelete');
+    console.log('Liseczek ' + itemToDelete.value);
+    var itemToDeleteIndex = -1;
+
+    for (var i = 0; i < select.options.length; i++) {
+        if (select.options[i].value == itemToDelete.value) {
+            itemToDeleteIndex = i;
+        }
+    }
+
+    if (itemToDeleteIndex != -1) {
+        var option = select[itemToDeleteIndex];
+        select.removeChild(option);
+    }
+});
+
 
 
 
